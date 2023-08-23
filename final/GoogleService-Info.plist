@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>953213210453-6rue7pht9jgtd3jppeq6fp5j19uk7qne.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.953213210453-6rue7pht9jgtd3jppeq6fp5j19uk7qne</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAkFwvKL8U647cZtb-gGDZq2y9h_emNLQA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>953213210453</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>zhz.final</string>
+	<key>PROJECT_ID</key>
+	<string>fit3178-a4project</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fit3178-a4project.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:953213210453:ios:6e4fc4977455d9c5ad29dc</string>
+	<key>DATABASE_URL</key>
+	<string>https://fit3178-a4project.firebaseio.com</string>
+</dict>
+</plist>

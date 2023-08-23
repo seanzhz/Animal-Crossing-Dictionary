@@ -7,14 +7,34 @@
 //
 
 import UIKit
+import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    static let CATEGORY_IDENTIFIER = "seanzhz.finalproject.notification"
+    var notificationsEnabled = false
+    var databaseController: DatabaseProtocol?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        databaseController = CoreDataController()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (granted, error) in
+            self.notificationsEnabled = granted
+            print("User allows notifcations: \(granted)")
+
+            if self.notificationsEnabled {
+                let acceptAction = UNNotificationAction(identifier: "accept", title: "Accept", options: .foreground)
+                let declineAction = UNNotificationAction(identifier: "decline", title: "Decline", options: .destructive)
+                let commentAction = UNTextInputNotificationAction(identifier: "comment", title: "Comment", options: .authenticationRequired, textInputButtonTitle: "Send", textInputPlaceholder: "Share your thoughts..")
+                
+                // Set up the category
+                let appCategory = UNNotificationCategory(identifier: AppDelegate.CATEGORY_IDENTIFIER, actions: [acceptAction, declineAction, commentAction], intentIdentifiers: [], options: UNNotificationCategoryOptions(rawValue: 0))
+                
+                // Register the category just created with the notification centre
+                UNUserNotificationCenter.current().setNotificationCategories([appCategory])
+            }
+        }
         return true
     }
 

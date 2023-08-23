@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bug" representedClassName="Bug" syncable="YES">
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeday" optional="YES" attributeType="String"/>
+        <relationship name="bugNorth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="North" inverseName="northBug" inverseEntity="North"/>
+        <relationship name="bugSouth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="South" inverseName="southBug" inverseEntity="South"/>
+    </entity>
+    <entity name="Chat" representedClassName="Chat" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Fish" representedClassName="Fish" syncable="YES">
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeday" optional="YES" attributeType="String"/>
+        <relationship name="fishNorth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="North" inverseName="northFish" inverseEntity="North"/>
+        <relationship name="fishSouth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="South" inverseName="southFish" inverseEntity="South"/>
+    </entity>
+    <entity name="Golden" representedClassName="Golden" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="imagePath" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="North" representedClassName="North" syncable="YES">
+        <attribute name="apr" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="aug" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="dec" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="feb" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jan" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jul" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jun" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mar" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="may" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="nov" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="oct" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="spe" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="northBug" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bug" inverseName="bugNorth" inverseEntity="Bug"/>
+        <relationship name="northFish" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fish" inverseName="fishNorth" inverseEntity="Fish"/>
+    </entity>
+    <entity name="South" representedClassName="South" syncable="YES">
+        <attribute name="apr" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="aug" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="dec" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="feb" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jan" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jul" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jun" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mar" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="may" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="nov" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="oct" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="spe" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="southBug" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bug" inverseName="bugSouth" inverseEntity="Bug"/>
+        <relationship name="southFish" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fish" inverseName="fishSouth" inverseEntity="Fish"/>
+    </entity>
+    <elements>
+        <element name="Bug" positionX="-54" positionY="0" width="128" height="148"/>
+        <element name="Chat" positionX="-27" positionY="144" width="128" height="58"/>
+        <element name="Fish" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="North" positionX="-36" positionY="36" width="128" height="253"/>
+        <element name="South" positionX="-18" positionY="126" width="128" height="253"/>
+        <element name="Golden" positionX="-27" positionY="144" width="128" height="88"/>
+    </elements>
+</model>
